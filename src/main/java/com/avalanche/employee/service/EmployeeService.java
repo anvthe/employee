@@ -1,0 +1,25 @@
+package com.avalanche.employee.service;
+
+import com.avalanche.employee.model.Employee;
+import com.avalanche.employee.model.EmployeeDto;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+import com.avalanche.employee.repository.EmployeeRepository;
+
+@Service
+public class EmployeeService {
+@Autowired
+private EmployeeRepository employeeRepository;
+
+    public void save ( EmployeeDto employee) {
+    Employee e = new Employee();
+    e.setName(employee.getName());
+    e.setSalary(employee.getSalary());
+    e.setAge(employee.getAge());
+    e.setGender(employee.getGender());
+    e.setDept(employee.getDept());
+    employeeRepository.save(e);
+
+
+   }
+}
