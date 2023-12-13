@@ -19,7 +19,14 @@ private EmployeeRepository employeeRepository;
     e.setGender(employee.getGender());
     e.setDept(employee.getDept());
     employeeRepository.save(e);
-
-
    }
+
+    //get employee by id
+    public EmployeeDto getEmployee (Long id) {
+        Employee employee = employeeRepository.findById(id).orElseThrow();
+        EmployeeDto employeeDto = new EmployeeDto();
+        employeeDto.setName(employee.getName());
+        employeeDto.setAge(employee.getAge());
+        return employeeDto;
+    }
 }

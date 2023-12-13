@@ -18,8 +18,12 @@ public class EmployeeController {
     public HttpStatus save (@RequestBody EmployeeDto employee){
         employeeService.save(employee);
         return HttpStatus.OK;
-    //@GetMapping()
-//    public int getId() {
-//       return 1;
     }
+
+    @GetMapping("/get-employee/{id}")
+    public EmployeeDto getEmployee(@PathVariable Long id){
+        return employeeService.getEmployee(id);
+    }
+
+
 }
