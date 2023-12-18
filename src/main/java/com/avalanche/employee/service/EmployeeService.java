@@ -8,7 +8,8 @@ import com.avalanche.employee.repository.EmployeeRepository;
 
 @Service
 public class EmployeeService {
-@Autowired
+
+    @Autowired
 private EmployeeRepository employeeRepository;
 
     public void save ( EmployeeDto employee) {
@@ -29,4 +30,18 @@ private EmployeeRepository employeeRepository;
         employeeDto.setAge(employee.getAge());
         return employeeDto;
     }
+
+    //update by id
+    public Employee updateEmployee (EmployeeDto employeeDto, Long id){
+
+        Employee exitOldEmployee = employeeRepository.findById(id).orElseThrow();
+
+//       exitOldEmployee.setName(employeeDto.getName());
+//        exitOldEmployee.setGender(employeeDto.getGender());
+//        exitOldEmployee.setDept(employeeDto.getDept());
+        exitOldEmployee = employeeRepository.save(exitOldEmployee);
+        return exitOldEmployee;
+    }
+
+
 }
