@@ -8,6 +8,8 @@ import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
 import com.avalanche.employee.service.EmployeeService;
 
+import java.util.List;
+
 @RestController
 @RequestMapping("/employees")
 public class EmployeeController {
@@ -39,6 +41,11 @@ public class EmployeeController {
     @DeleteMapping("/delete-employee/{id}")
     public EmployeeDto deleteEmployee (@PathVariable Long id){
         return employeeService.deleteEmployee(id);
+    }
+
+    @GetMapping
+    public List<Employee> getAllEmployees(){
+        return  employeeService.getAllEmployees();
     }
 
 
