@@ -42,9 +42,9 @@ private EmployeeRepository employeeRepository;
         existOldEmployee.setGender(employeedto.getGender());
         existOldEmployee.setDept(employeedto.getDept());
 
-       Employee updatedEmp = employeeRepository.save(existOldEmployee);
+       existOldEmployee = employeeRepository.save(existOldEmployee);
 
-        return updatedEmp;
+        return existOldEmployee;
     }
 
 }
