@@ -5,11 +5,8 @@ import com.avalanche.employee.model.EmployeeDto;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import com.avalanche.employee.repository.EmployeeRepository;
-
-
-import java.util.Collections;
 import java.util.List;
-import java.util.Optional;
+
 
 @Service
 public class EmployeeService {
