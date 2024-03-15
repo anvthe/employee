@@ -1,20 +1,19 @@
-package com.avalanche.employee.dto;
+package com.avalanche.employee.model;
 
+import jakarta.persistence.Entity;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
-@Setter
 @Getter
+@Setter
 @NoArgsConstructor
 @AllArgsConstructor
-public class StudentDto {
+public class TeacherDto {
 
     private String name;
-    private Integer roll;
-    private Integer age;
+    private int age;
     private String gender;
     private String dept;
-
 }
