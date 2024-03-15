@@ -1,7 +1,7 @@
 package com.avalanche.employee.service;
 
 import com.avalanche.employee.model.Student;
-import com.avalanche.employee.model.StudentDto;
+import com.avalanche.employee.dto.StudentDto;
 import com.avalanche.employee.repository.StudentRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;

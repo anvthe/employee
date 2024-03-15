@@ -2,7 +2,7 @@ package com.avalanche.employee.controller;
 
 
 import com.avalanche.employee.model.Student;
-import com.avalanche.employee.model.StudentDto;
+import com.avalanche.employee.dto.StudentDto;
 import com.avalanche.employee.repository.StudentRepository;
 import com.avalanche.employee.service.StudentService;
 import org.springframework.beans.factory.annotation.Autowired;

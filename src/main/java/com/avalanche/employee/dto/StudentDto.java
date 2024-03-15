@@ -1,4 +1,4 @@
-package com.avalanche.employee.model;
+package com.avalanche.employee.dto;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -9,12 +9,13 @@ import lombok.Setter;
 @Getter
 @NoArgsConstructor
 @AllArgsConstructor
-public class EmployeeDto {
+public class StudentDto {
 
     private String name;
-    private Integer salary;
+    private Integer roll;
     private Integer age;
     private String gender;
     private String dept;
+
 
 }

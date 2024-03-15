@@ -1,7 +1,7 @@
 package com.avalanche.employee.controller;
 
 import com.avalanche.employee.model.Employee;
-import com.avalanche.employee.model.EmployeeDto;
+import com.avalanche.employee.dto.EmployeeDto;
 import com.avalanche.employee.repository.EmployeeRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -35,7 +35,7 @@ public class EmployeeController {
     @PutMapping("/update-employee/{id}")
     public Employee updateEmployee(@PathVariable Long id, @RequestBody EmployeeDto employeeDto){
 
-         return  employeeService.updateEmployee(id, employeeDto);
+         return employeeService.updateEmployee(id, employeeDto);
     }
 
     @DeleteMapping("/delete-employee/{id}")
@@ -47,7 +47,6 @@ public class EmployeeController {
     public List<Employee> getAllEmployees(){
         return  employeeService.getAllEmployees();
     }
-
 
 
 }

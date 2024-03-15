@@ -1,21 +1,19 @@
-package com.avalanche.employee.model;
+package com.avalanche.employee.dto;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
-@Setter
 @Getter
+@Setter
 @NoArgsConstructor
 @AllArgsConstructor
-public class StudentDto {
+public class VehicleDto {
 
     private String name;
-    private Integer roll;
-    private Integer age;
-    private String gender;
-    private String dept;
+    private int year;
+    private String model;
 
 
 }
