@@ -1,4 +1,4 @@
-package com.avalanche.employee.model;
+package com.avalanche.employee.dto;
 
 import jakarta.persistence.Entity;
 import lombok.AllArgsConstructor;

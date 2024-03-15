@@ -1,7 +1,7 @@
 package com.avalanche.employee.service;
 
 import com.avalanche.employee.model.Employee;
-import com.avalanche.employee.model.EmployeeDto;
+import com.avalanche.employee.dto.EmployeeDto;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import com.avalanche.employee.repository.EmployeeRepository;
@@ -43,7 +43,6 @@ public class EmployeeService {
         existOldEmployee.setAge(employeedto.getAge());
         existOldEmployee.setGender(employeedto.getGender());
         existOldEmployee.setDept(employeedto.getDept());
-
         existOldEmployee = employeeRepository.save(existOldEmployee);
 
         return existOldEmployee;
@@ -58,9 +57,10 @@ public class EmployeeService {
         return null;
     }
 
+    //get all employee
     public List<Employee> getAllEmployees(){
-        //List<Employee> employee = (List<Employee>) new Employee();
-        //employeeRepository.findAll();
+//        List<Employee> employee = (List<Employee>) new Employee();
+//        employeeRepository.findAll();
         return (List<Employee>) employeeRepository.findAll();
     }
 }

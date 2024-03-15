@@ -1,6 +1,6 @@
 package com.avalanche.employee.controller;
 
-import com.avalanche.employee.model.TeacherDto;
+import com.avalanche.employee.dto.TeacherDto;
 import com.avalanche.employee.repository.TeacherRepository;
 import com.avalanche.employee.service.TeacherService;
 import org.springframework.beans.factory.annotation.Autowired;
